@@ -51,8 +51,6 @@ export const validatePhoneNumber = (inputtxt) => {
     }
 }
 
-  
-
 //to get formattd date just eg:console.log(getDate('hh:mm:ss ampm',new Date("June 1 2021 12:30:12")))
 export const getDate = (format = 'dd-mm-yyyy', current_datetime = new Date()) => {
     // let current_datetime = new Date();
@@ -65,7 +63,6 @@ export const getDate = (format = 'dd-mm-yyyy', current_datetime = new Date()) =>
 
     return formatted;
 }
-
 
 //get current time in specified format, to get am pm time pass ampm in format string eg: hh:mm:ss ampm
 //console.log(getTime('hh:mm:ss ampm',new Date("June 1 2021 12:30:12")))
@@ -94,7 +91,6 @@ export const getTime = (format = 'hh:mm:ss', current_datetime = new Date()) => {
     return formatted;
 }
 
-
 //returns the starting date object of the current week or of the one which is passed
 export const startOfWeek = (date = new Date()) => {
     let diff = date.getDate() - date.getDay() + (date.getDay() === 0 ? -6 : 1);
@@ -108,7 +104,6 @@ export const endOfWeek = (date = new Date()) => {
     return new Date(date.setDate(lastday));
 }
 
-
 //returns start and end date object of the week in an object 
 //{firstDay:'Mon Jun 21 2021 13:43:54 GMT+0530 (India Standard Time)', lastDay:'Sun Jun 27 2021 13:43:54 GMT+0530 (India Standard Time)'}
 export const startAndEndOfWeek = (date = new Date()) => {
@@ -117,7 +112,3 @@ export const startAndEndOfWeek = (date = new Date()) => {
     return { firstDay: new Date(date.setDate(diff)), lastDay: new Date(date.setDate(lastday)) };
 
 }
-
-
-
-
